@@ -13,13 +13,19 @@ ventana.resizable(0,0)
 ventana.config(bg="green")
 
 bebe = PhotoImage(file="img/bebe7.png")
+familia1 = PhotoImage(file = "img/familia.png")
+yo = PhotoImage(file = "img/yo.png")
+estrella = PhotoImage(file="img/estrella.png")
+kitty= PhotoImage(file = "img/kitty.png")
+nesticor= PhotoImage(file="img/nesticor.png")
+
 
 def nacimiento():
     global toplevel_nacimiento
     toplevel_nacimiento = Toplevel()
     toplevel_nacimiento.title("nacimiento")
     toplevel_nacimiento.resizable(False, False)
-    toplevel_nacimiento.geometry("600x500")
+    toplevel_nacimiento.geometry("600x300")
     toplevel_nacimiento.config(bg="yellow")
 
     titulo1 = Label(toplevel_nacimiento, text="veran mis datos de mi nacimiento")
@@ -39,22 +45,36 @@ def familia():
     toplevel_familia = Toplevel()
     toplevel_familia.title("familia")
     toplevel_familia.resizable(False, False)
-    toplevel_familia.geometry("600x500")
-    toplevel_familia.config(bg="white")
-    frame_familia = Frame(toplevel_familia)
-    frame_familia.config(bg = "blue", width= 600, height=500 )
-    frame_familia.place(x=0,y=0)
+    toplevel_familia.geometry("600x300")
+    toplevel_familia.config(bg="blue")
+
+    lb_familia = Label(toplevel_familia, image = familia1)
+    lb_familia.place(x= 50,y= 50)
+
+    titulo3 = Label(toplevel_familia, text=" vivo con mis papas, mi hermana y mis mascotas")
+    titulo3.config(bg = "white",fg="blue", font=("Helvetica", 15))
+    titulo3.place(x=80,y=160)
+
+    lb_estrella = Label(toplevel_familia, image = estrella)
+    lb_estrella.place(x= 200,y= 50)
+
+    lb_kitty = Label(toplevel_familia, image = kitty)
+    lb_kitty.place(x= 270,y= 50)
 
 def educacion():
     global toplevel_educacion
     toplevel_educacion = Toplevel()
-    toplevel_educacion.title("educacion")
+    toplevel_educacion.title("educación")
     toplevel_educacion.resizable(False, False)
     toplevel_educacion.geometry("600x500")
     toplevel_educacion.config(bg="white")
     frame_educacion = Frame(toplevel_educacion)
     frame_educacion.config(bg = "red", width= 600, height=500 )
     frame_educacion.place(x=0,y=0)
+
+    lb_nesticor = Label(toplevel_educacion, image = nesticor)
+    lb_nesticor.place(x= 50,y= 50)
+
 
 def amigos():
     global toplevel_amigos
@@ -66,6 +86,9 @@ def amigos():
     frame_amigos = Frame(toplevel_amigos)
     frame_amigos.config(bg = "green", width= 600, height=500 )
     frame_amigos.place(x=0,y=0)
+
+
+
 
 def hobbies():
     global toplevel_hobbies
